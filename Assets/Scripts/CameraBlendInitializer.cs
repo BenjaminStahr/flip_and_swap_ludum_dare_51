@@ -10,8 +10,8 @@ public class CameraBlendInitializer : MonoBehaviour
     [SerializeField] public Material blendDarkMaterial;
     //private ShaderController shaderController;
     private bool dark;
-
-    float current;
+    float animationDuration = 0.4f;
+    float animationStart = 0;
 
     void Start()
     {
@@ -19,7 +19,6 @@ public class CameraBlendInitializer : MonoBehaviour
         blendLightMaterial.SetFloat("_StartTime", -float.MaxValue);
         blendDarkMaterial.SetFloat("_Period", blendPeriod);
         blendDarkMaterial.SetFloat("_StartTime", -float.MaxValue);
-        current = Time.time;
         dark = false;
     }
 
@@ -28,28 +27,31 @@ public class CameraBlendInitializer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
-            //blendLightMaterial.SetFloat("_StartTime", Time.time);
-            //blendDarkMaterial.SetFloat("_StartTime", Time.time);
             if (!dark)
             {
+                blendLightMaterial.SetFloat("_Period", 0.4f);
                 blendLightMaterial.SetFloat("_StartTime", Time.time);
-
-                //blendDarkMaterial.SetFloat("_StartTime", Time.time);
+                animationStart = Time.time;
                 dark = !dark;
             }
             else 
             {
                 blendDarkMaterial.SetFloat("_StartTime", Time.time);
-                //blendDarkMaterial.SetFloat("_StartTime", Time.time);
+                blendDarkMaterial.SetFloat("_Period", 0.4f);
+                animationStart = Time.time;
                 dark = !dark;
             }
-            
-            /*if (Time.time - current > 10) 
-            {
-                blendMaterial.SetFloat("_StartTime", Time.time);
-                current = Time.time;
-            }*/
+        }
+        if (Time.time > animationStart + animationDuration)
+        {
+            blendLightMaterial.SetFloat("_Pixelate", 4000);
+            blendDarkMaterial.SetFloat("_Pixelate", 4000);
+        }
+        else
+        {
+            int pixFactor = Random.RandomRange(60, 100);
+            blendLightMaterial.SetFloat("_Pixelate", pixFactor);
+            blendDarkMaterial.SetFloat("_Pixelate", pixFactor);
         }
     }
 }
