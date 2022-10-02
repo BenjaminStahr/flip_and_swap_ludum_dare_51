@@ -9,9 +9,9 @@ public class CameraBlendInitializer : MonoBehaviour
     [SerializeField] public Material blendLightMaterial;
     [SerializeField] public Material blendDarkMaterial;
     //private ShaderController shaderController;
-    private bool dark;
     float animationDuration = 0.4f;
     float animationStart = 0;
+
 
     void Start()
     {
@@ -19,29 +19,11 @@ public class CameraBlendInitializer : MonoBehaviour
         blendLightMaterial.SetFloat("_StartTime", -float.MaxValue);
         blendDarkMaterial.SetFloat("_Period", blendPeriod);
         blendDarkMaterial.SetFloat("_StartTime", -float.MaxValue);
-        dark = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (!dark)
-            {
-                blendLightMaterial.SetFloat("_Period", 0.4f);
-                blendLightMaterial.SetFloat("_StartTime", Time.time);
-                animationStart = Time.time;
-                dark = !dark;
-            }
-            else 
-            {
-                blendDarkMaterial.SetFloat("_StartTime", Time.time);
-                blendDarkMaterial.SetFloat("_Period", 0.4f);
-                animationStart = Time.time;
-                dark = !dark;
-            }
-        }
         if (Time.time > animationStart + animationDuration)
         {
             blendLightMaterial.SetFloat("_Pixelate", 4000);
@@ -52,6 +34,22 @@ public class CameraBlendInitializer : MonoBehaviour
             int pixFactor = Random.RandomRange(60, 100);
             blendLightMaterial.SetFloat("_Pixelate", pixFactor);
             blendDarkMaterial.SetFloat("_Pixelate", pixFactor);
+        }
+    }
+
+    public void Swap(bool dark)
+    {
+        if (!dark)
+        {
+            blendLightMaterial.SetFloat("_Period", 0.4f);
+            blendLightMaterial.SetFloat("_StartTime", Time.time);
+            animationStart = Time.time;
+        }
+        else
+        {
+            blendDarkMaterial.SetFloat("_StartTime", Time.time);
+            blendDarkMaterial.SetFloat("_Period", 0.4f);
+            animationStart = Time.time;
         }
     }
 }
