@@ -97,7 +97,11 @@ public class SwapController : MonoBehaviour
         GameObject shadow = FindCorresponding(obj);
         Transform oldParent = obj.transform.parent;
         Transform newParent = shadow.transform.parent;
+        Vector2 oldp = obj.transform.position;
+        Vector2 newp = shadow.transform.position;
         obj.transform.SetParent(newParent);
         shadow.transform.SetParent(oldParent);
+        obj.transform.position = newp;
+        shadow.transform.position = oldp;
     }
 }

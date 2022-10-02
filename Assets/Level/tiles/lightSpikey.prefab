@@ -81,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0094c997f2e4a3a4395fe595d35c6aea, type: 3}
     - target: {fileID: 8038854977058506730, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
       propertyPath: darkColor.a
-      value: 0.5019608
+      value: 0.29803923
       objectReference: {fileID: 0}
     - target: {fileID: 8038854977058506730, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
       propertyPath: darkColor.b
@@ -122,6 +122,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2825703199273718878, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
   m_PrefabInstance: {fileID: 3680295675749545846}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4494347795537152228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451816583794008872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5293a63ceb571942a1747b9a0451a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  home: 1
+  movable: 0
+  ghostSprite: {fileID: 21300000, guid: c56c7f21e11db5a4c8d1de2315cccf45, type: 3}
 --- !u!114 &8391811348412350257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,3 +152,23 @@ MonoBehaviour:
   darkColor: {r: 1, g: 1, b: 1, a: 0.49019608}
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   refresh: 0
+--- !u!1 &2931391882618443894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1998872599049449216, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+  m_PrefabInstance: {fileID: 3680295675749545846}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3695426122735217466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931391882618443894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5293a63ceb571942a1747b9a0451a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  home: 1
+  movable: 0
+  ghostSprite: {fileID: 21300000, guid: a93fc68542b46104ba8f8539374cef00, type: 3}

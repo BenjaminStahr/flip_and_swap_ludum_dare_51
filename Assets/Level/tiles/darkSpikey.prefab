@@ -89,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038854977058506730, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
       propertyPath: lightColor.a
-      value: 0.5019608
+      value: 0.29803923
       objectReference: {fileID: 0}
     - target: {fileID: 8038854977058506730, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
       propertyPath: lightColor.b
@@ -110,6 +110,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2825703199273718878, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
   m_PrefabInstance: {fileID: 3680295675749545846}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1649053355728722932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451816583794008872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5293a63ceb571942a1747b9a0451a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  home: 0
+  movable: 0
+  ghostSprite: {fileID: 21300000, guid: b0b5b887b2f9f3e4b9801cdd53827c55, type: 3}
 --- !u!114 &8391811348412350257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,3 +140,23 @@ MonoBehaviour:
   darkColor: {r: 1, g: 1, b: 1, a: 1}
   lightColor: {r: 1, g: 1, b: 1, a: 0.50980395}
   refresh: 0
+--- !u!1 &2931391882618443894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1998872599049449216, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+  m_PrefabInstance: {fileID: 3680295675749545846}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7564008442611736827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931391882618443894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5293a63ceb571942a1747b9a0451a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  home: 0
+  movable: 0
+  ghostSprite: {fileID: 21300000, guid: 33dad62413c9347409d34eac0c1500eb, type: 3}
