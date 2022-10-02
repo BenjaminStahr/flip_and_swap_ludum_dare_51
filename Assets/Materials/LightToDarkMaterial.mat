@@ -69,10 +69,10 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     - _Period: 0.4
-    - _Pixelate: 4000
+    - _Pixelate: 141
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _StartTime: 17.870928
+    - _StartTime: 38.896793
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
