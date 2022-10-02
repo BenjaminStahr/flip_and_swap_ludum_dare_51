@@ -8,11 +8,12 @@ TagManager:
   - LightCamera
   - LightCameraBlend
   - DarkCameraBlend
+  - Death
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
