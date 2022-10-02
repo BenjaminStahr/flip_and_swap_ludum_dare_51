@@ -1895,8 +1895,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e200ca5e7a57664e8f124957ad2cb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
-  runSpeed: 4
+  movementSpeed: 3
+  runSpeed: 5
   jumpSpeed: 7
   groundLayer:
     serializedVersion: 2
@@ -1914,8 +1914,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.022137165, y: 0.066408634}
-  m_Size: {x: 2.1073675, y: 3.9471827}
+  m_Offset: {x: 0, y: -0.055302143}
+  m_Size: {x: 1.4988117, y: 3.703761}
   m_Direction: 0
 --- !u!1 &5885912937868174897
 GameObject:
