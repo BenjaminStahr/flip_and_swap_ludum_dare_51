@@ -49,7 +49,7 @@ public class CameraBlendInitializer : MonoBehaviour
         }
         else
         {
-            int pixFactor = Random.RandomRange(60, 100);
+            int pixFactor = Random.RandomRange(120, 180);
             blendLightMaterial.SetFloat("_Pixelate", pixFactor);
             blendDarkMaterial.SetFloat("_Pixelate", pixFactor);
         }
