@@ -41,7 +41,13 @@ public class CamControl : MonoBehaviour
 
         if (following != null)
         {
-            Vector2 delta = following.transform.position - transform.position;
+            Vector3 fp = following.transform.position;
+            if (fp.y < -3.5f)
+            {
+                fp.y = -3.5f;
+            }
+
+            Vector2 delta = fp - transform.position;
             if (delta.magnitude > 30)
             {
                 delta = delta.normalized * 30f;

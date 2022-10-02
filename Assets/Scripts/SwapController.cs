@@ -46,13 +46,13 @@ public class SwapController : MonoBehaviour
     {
         if (Time.realtimeSinceStartup > timer + 10f)
         {
-            timer = Time.realtimeSinceStartup;
             Swap();
         }
     }
 
     public void Swap()
     {
+        timer = Time.realtimeSinceStartup;
         dark = !dark;
         cbi.Swap(dark);
         Apply();

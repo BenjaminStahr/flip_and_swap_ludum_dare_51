@@ -4,8 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider2D), typeof(SpriteRenderer))]
 public class SwapGhost : MonoBehaviour
-{
-    
+{    
     enum Home
     {
         Dark,
@@ -22,7 +21,6 @@ public class SwapGhost : MonoBehaviour
     {
         Collider2D collider = GetComponent<Collider2D>();
         SpriteRenderer rnd = GetComponent<SpriteRenderer>();
-
 
         bool homeDark = home == Home.Dark;
         bool dark = transform.position.x > 500;

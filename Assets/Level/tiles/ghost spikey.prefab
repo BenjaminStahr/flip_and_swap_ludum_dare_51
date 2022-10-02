@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5645480724644042534
+--- !u!1001 &3680295675749545846
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1998872599049449216, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
       propertyPath: m_Name
-      value: ghost spikey
+      value: spikey
       objectReference: {fileID: 0}
     - target: {fileID: 1998872599049449217, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
       propertyPath: m_RootOrder
@@ -55,43 +55,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1998872599049449219, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 2489481094685675062, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698668520868662138, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: ghostSprite
       value: 
-      objectReference: {fileID: 21300000, guid: e6b98280e855ec54fa0928e08a95d292, type: 3}
+      objectReference: {fileID: 21300000, guid: 0094c997f2e4a3a4395fe595d35c6aea, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
---- !u!1 &7597058929588962168 stripped
+--- !u!1 &1451816583794008872 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2825703199273718878, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
-  m_PrefabInstance: {fileID: 5645480724644042534}
+  m_PrefabInstance: {fileID: 3680295675749545846}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2704995674447644900
+--- !u!114 &8391811348412350257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7597058929588962168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5293a63ceb571942a1747b9a0451a9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  home: 0
-  ghostSprite: {fileID: 21300000, guid: 528e88551042ade49a3cee982e98f06b, type: 3}
---- !u!114 &506864892718479365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7597058929588962168}
+  m_GameObject: {fileID: 1451816583794008872}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e4e94cf18a63e4fa6159470d07e93a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   darkColor: {r: 1, g: 1, b: 1, a: 1}
-  lightColor: {r: 1, g: 1, b: 1, a: 0}
+  lightColor: {r: 1, g: 1, b: 1, a: 0.50980395}
   refresh: 0
