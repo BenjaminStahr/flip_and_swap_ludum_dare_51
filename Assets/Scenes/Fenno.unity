@@ -410,10 +410,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dark
       objectReference: {fileID: 0}
-    - target: {fileID: 4703571146452543309, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
-      propertyPath: m_TagString
-      value: Dark
-      objectReference: {fileID: 0}
     - target: {fileID: 4703571146452543310, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -471,10 +467,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 597865874832421296, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
-      propertyPath: currentLevelID
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5885912937304195059, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
       propertyPath: other
       value: 
@@ -525,10 +517,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5885912937385762529, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
       propertyPath: m_Name
-      value: Light
-      objectReference: {fileID: 0}
-    - target: {fileID: 5885912937385762529, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
-      propertyPath: m_TagString
       value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []

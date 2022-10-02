@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5885912936631049180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 100}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5885912937304195056}
@@ -1048,7 +1048,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1192,7 +1192,7 @@ GameObject:
   - component: {fileID: 5885912937385762528}
   m_Layer: 0
   m_Name: Light
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1487,7 +1487,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2229,6 +2229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level
       objectReference: {fileID: 0}
+    - target: {fileID: 6477017912821837124, guid: a156a07bbda67864ba96388049950850, type: 3}
+      propertyPath: currentLevelID
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a156a07bbda67864ba96388049950850, type: 3}
 --- !u!4 &5224032167580657204 stripped
@@ -2249,11 +2253,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 202007225145793134, guid: b31b48eb2a977a04e8f15b307c63b69d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -1.39
       objectReference: {fileID: 0}
     - target: {fileID: 202007225145793134, guid: b31b48eb2a977a04e8f15b307c63b69d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 2.88
       objectReference: {fileID: 0}
     - target: {fileID: 202007225145793134, guid: b31b48eb2a977a04e8f15b307c63b69d, type: 3}
       propertyPath: m_LocalPosition.z
