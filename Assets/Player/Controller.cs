@@ -24,6 +24,8 @@ public class Controller : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sr;
 
+    bool alive = true;
+
     private void Start() 
     {
         body = GetComponent<Rigidbody2D>();
@@ -33,6 +35,11 @@ public class Controller : MonoBehaviour
 
     private void Update()
     {
+        if (!alive)
+        {
+            return;
+        }
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -83,6 +90,16 @@ public class Controller : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    public void Death()
+    {
+        if (!alive)
+        {
+            return;
+        }
+        alive = false;
+        anim.SetTrigger("death");
     }
 }
 

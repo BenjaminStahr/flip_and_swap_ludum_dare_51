@@ -8,8 +8,7 @@ public class Spikey : MonoBehaviour
     bool up;
     float timer;
     Animator anim;
-    BoxCollider2D collider;
-
+    BoxCollider2D trigger;
 
     [SerializeField]
     private float uptime = 3;
@@ -24,7 +23,7 @@ public class Spikey : MonoBehaviour
         up = false;
 
         anim = GetComponent<Animator>();
-        collider = GetComponent<BoxCollider2D>();
+        trigger = GetComponent<BoxCollider2D>();
         anim.SetBool("up", up);
     }
 
@@ -37,7 +36,16 @@ public class Spikey : MonoBehaviour
             timer = Time.realtimeSinceStartup;
             up = !up;
             anim.SetBool("up", up);
-            collider.enabled = false;
+            trigger.enabled = up;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.GetComponent<Controller>().Death();
+        }
+    }
+
 }
