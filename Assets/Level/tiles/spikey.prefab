@@ -217,9 +217,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: spikey
       objectReference: {fileID: 0}
+    - target: {fileID: 2712298068584221090, guid: 9c0ea09ce84fa5d498494dabc8b828f9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2712298068584221090, guid: 9c0ea09ce84fa5d498494dabc8b828f9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 2712298068584221090, guid: 9c0ea09ce84fa5d498494dabc8b828f9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879071847296688459, guid: 9c0ea09ce84fa5d498494dabc8b828f9, type: 3}
+      propertyPath: darkColor.b
+      value: 0.352758
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879071847296688459, guid: 9c0ea09ce84fa5d498494dabc8b828f9, type: 3}
+      propertyPath: darkColor.g
+      value: 0.352758
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879071847296688459, guid: 9c0ea09ce84fa5d498494dabc8b828f9, type: 3}
+      propertyPath: darkColor.r
+      value: 0.518
+      objectReference: {fileID: 0}
     - target: {fileID: 5879071847296688459, guid: 9c0ea09ce84fa5d498494dabc8b828f9, type: 3}
       propertyPath: lightColor.a
-      value: 0.3137255
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879071847296688459, guid: 9c0ea09ce84fa5d498494dabc8b828f9, type: 3}
+      propertyPath: lightColor.b
+      value: 0.645
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879071847296688459, guid: 9c0ea09ce84fa5d498494dabc8b828f9, type: 3}
+      propertyPath: lightColor.g
+      value: 0.4904688
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879071847296688459, guid: 9c0ea09ce84fa5d498494dabc8b828f9, type: 3}
+      propertyPath: lightColor.r
+      value: 0.44343752
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c0ea09ce84fa5d498494dabc8b828f9, type: 3}
