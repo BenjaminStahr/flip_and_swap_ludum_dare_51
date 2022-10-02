@@ -65,12 +65,14 @@ public class Controller : MonoBehaviour
             if (faceLeft == false) 
             {
                 faceLeft = true;
-                gameObject.transform.GetChild(0).transform.Rotate(0, 180, 0);
-                gameObject.transform.GetChild(0).transform.position = new Vector3(gameObject.transform.GetChild(0).transform.position.x + 1.5f, 
-                    gameObject.transform.GetChild(0).transform.position.y,
-                    gameObject.transform.GetChild(0).transform.position.z);
+                Transform t = gameObject.transform.GetChild(0);
+                t.Rotate(0, 180, 0);
+                t.position = new Vector3(
+                    t.position.x + 1.5f, 
+                    t.position.y,
+                    t.position.z
+                    );
             }
-
         }
         if (moveHorizontal < 0)
         {
@@ -78,10 +80,13 @@ public class Controller : MonoBehaviour
             if (faceLeft == true)  
             {
                 faceLeft = false;
-                gameObject.transform.GetChild(0).transform.Rotate(0, 180, 0);
-                gameObject.transform.GetChild(0).transform.position = new Vector3(gameObject.transform.GetChild(0).transform.position.x - 1.5f,
-                    gameObject.transform.GetChild(0).transform.position.y,
-                    gameObject.transform.GetChild(0).transform.position.z);
+                Transform t = gameObject.transform.GetChild(0);
+                t.Rotate(0, 180, 0);
+                t.position = new Vector3(
+                    t.position.x - 1.5f,
+                    t.position.y,
+                    t.position.z
+                    );
             }
         }
         anim.SetBool("grounded", isGrounded && body.velocity.y <= 0);
