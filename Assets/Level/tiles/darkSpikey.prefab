@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1998872599049449216, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
       propertyPath: m_Name
-      value: spikey
+      value: darkSpikey
       objectReference: {fileID: 0}
     - target: {fileID: 1998872599049449217, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
       propertyPath: m_RootOrder
@@ -55,6 +55,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1998872599049449219, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.0035154943
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998872599049449219, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.056447167
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998872599049449219, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
     - target: {fileID: 2489481094685675062, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -63,6 +75,34 @@ PrefabInstance:
       propertyPath: ghostSprite
       value: 
       objectReference: {fileID: 21300000, guid: 0094c997f2e4a3a4395fe595d35c6aea, type: 3}
+    - target: {fileID: 8038854977058506730, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: darkColor.b
+      value: 0.003921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038854977058506730, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: darkColor.g
+      value: 0.054901965
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038854977058506730, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: darkColor.r
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038854977058506730, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: lightColor.a
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038854977058506730, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: lightColor.b
+      value: 0.003921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038854977058506730, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: lightColor.g
+      value: 0.054901965
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038854977058506730, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
+      propertyPath: lightColor.r
+      value: 0.74509805
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec262b411b09b664eaac7059e98b8da6, type: 3}
 --- !u!1 &1451816583794008872 stripped
