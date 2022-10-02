@@ -5,19 +5,21 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D), typeof(SpriteRenderer))]
 public class SwapGhost : MonoBehaviour
 {    
-    public enum Home
+    enum Home
     {
         Dark,
         Light
     }
 
     [SerializeField]
-    public Home home;
+    private Home home;
+
+    bool isGhost;
 
     [SerializeField]
     private Sprite ghostSprite;
 
-    void initHome() 
+    private void Start()
     {
         Collider2D collider = GetComponent<Collider2D>();
         SpriteRenderer rnd = GetComponent<SpriteRenderer>();
@@ -25,7 +27,7 @@ public class SwapGhost : MonoBehaviour
         bool homeDark = home == Home.Dark;
         bool dark = transform.position.x > 500;
 
-        bool isGhost = homeDark != dark;
+        isGhost = homeDark != dark;
 
         Animator anim;
         if (TryGetComponent(out anim))
@@ -34,33 +36,18 @@ public class SwapGhost : MonoBehaviour
         }
 
         collider.enabled = !isGhost;
-        if (isGhost)
+        if (isGhost && ghostSprite != null)
         {
             rnd.sprite = ghostSprite;
         }
     }
 
-    private void Start()
+    private void Update()
     {
-        initHome();
-    }
-    public bool ReinitHome() 
-    {
-        bool homeFlag;
-        if (home == Home.Dark)
+        if (isGhost)
         {
-            home = Home.Light;
-            homeFlag = false;
+            GameObject other = SwapController.GI.FindCorresponding(gameObject);
+            this.transform.localPosition = other.transform.localPosition;
         }
-        else
-        {
-            home = Home.Dark;
-            homeFlag = true;
-        }
-        //Collider2D collider = GetComponent<Collider2D>();
-        //SpriteRenderer rnd = GetComponent<SpriteRenderer>();
-        //collider.enabled = false;
-        //rnd.sprite = ghostSprite;
-        return homeFlag;
     }
 }
