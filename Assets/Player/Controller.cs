@@ -16,6 +16,8 @@ public class Controller : MonoBehaviour
     [SerializeField]
     private LayerMask groundLayer;
 
+    public bool faceLeft = true;
+
     // Internal
     private bool isGrounded = true;
 
@@ -53,10 +55,27 @@ public class Controller : MonoBehaviour
         if (moveHorizontal > 0)
         {
             sr.flipX = false;
+            if (faceLeft == false) 
+            {
+                faceLeft = true;
+                gameObject.transform.GetChild(0).transform.Rotate(0, 180, 0);
+                gameObject.transform.GetChild(0).transform.position = new Vector3(gameObject.transform.GetChild(0).transform.position.x + 1.5f, 
+                    gameObject.transform.GetChild(0).transform.position.y,
+                    gameObject.transform.GetChild(0).transform.position.z);
+            }
+
         }
         if (moveHorizontal < 0)
         {
             sr.flipX = true;
+            if (faceLeft == true)  
+            {
+                faceLeft = false;
+                gameObject.transform.GetChild(0).transform.Rotate(0, 180, 0);
+                gameObject.transform.GetChild(0).transform.position = new Vector3(gameObject.transform.GetChild(0).transform.position.x - 1.5f,
+                    gameObject.transform.GetChild(0).transform.position.y,
+                    gameObject.transform.GetChild(0).transform.position.z);
+            }
         }
         anim.SetBool("grounded", isGrounded && body.velocity.y <= 0);
         anim.SetBool("running", run);

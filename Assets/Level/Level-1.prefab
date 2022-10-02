@@ -9527,10 +9527,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5354059551635716366}
     m_Modifications:
-    - target: {fileID: 2171488951293928632, guid: 17bcb2ad5ba4bff4f957f984861ba03b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2931391882618443894, guid: 17bcb2ad5ba4bff4f957f984861ba03b, type: 3}
       propertyPath: m_Name
       value: spikey

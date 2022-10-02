@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &489397410 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5885912937842303893, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
+  m_PrefabInstance: {fileID: 5885912938017718053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &519420031 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5885912937719023450, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
@@ -288,6 +293,7 @@ MonoBehaviour:
   darkCam: {fileID: 1282514888}
   lightCamControl: {fileID: 2005893334}
   darkCamControl: {fileID: 761069286}
+  dark: 0
 --- !u!114 &655618280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +320,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c14fa3350d1f16d40a7ddcfb022cb4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &834135961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 834135962}
+  - component: {fileID: 834135963}
+  m_Layer: 0
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &834135962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834135961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.24, y: -0.1, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 489397410}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &834135963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834135961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ff3dede3c158448898a5531aac9b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 2763332148931980801, guid: f7f9c8a90a39ebc4c93d0121a2927a53, type: 3}
+  speed: 9
 --- !u!20 &1282514888 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4703571147365413568, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
@@ -550,5 +602,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 976073074507958329, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}

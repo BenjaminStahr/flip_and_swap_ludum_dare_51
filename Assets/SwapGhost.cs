@@ -17,6 +17,9 @@ public class SwapGhost : MonoBehaviour
     bool isGhost;
 
     [SerializeField]
+    private bool movable = false;
+
+    [SerializeField]
     private Sprite ghostSprite;
 
     private void Start()
@@ -44,7 +47,7 @@ public class SwapGhost : MonoBehaviour
 
     private void Update()
     {
-        if (isGhost)
+        if (movable && isGhost)
         {
             GameObject other = SwapController.GI.FindCorresponding(gameObject);
             this.transform.localPosition = other.transform.localPosition;
