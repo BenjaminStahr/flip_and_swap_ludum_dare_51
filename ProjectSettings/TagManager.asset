@@ -9,6 +9,9 @@ TagManager:
   - LightCameraBlend
   - DarkCameraBlend
   - Death
+  - Game
+  - LevelOneLight
+  - LevelOneDark
   layers:
   - Default
   - TransparentFX

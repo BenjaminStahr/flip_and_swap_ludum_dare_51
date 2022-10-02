@@ -14,7 +14,7 @@ public class SwapColor : MonoBehaviour
     private Color lightColor;
 
     [SerializeField]
-    private bool refresh;
+    public bool refresh;
 
     private void Start()
     {
@@ -27,6 +27,7 @@ public class SwapColor : MonoBehaviour
         if (refresh)
         {
             Refresh();
+            refresh = false;
         }
     }
 
