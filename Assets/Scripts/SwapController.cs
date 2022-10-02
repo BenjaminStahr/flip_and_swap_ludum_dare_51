@@ -17,7 +17,7 @@ public class SwapController : MonoBehaviour
 
     private float timer;
 
-    private bool dark;
+    public bool dark;
     public bool Dark { get => dark; }
 
     static SwapController gi;

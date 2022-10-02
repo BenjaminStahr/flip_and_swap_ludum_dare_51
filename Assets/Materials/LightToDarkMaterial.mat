@@ -68,11 +68,15 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _Period: 1
+    - _Period: 0.4
     - _Pixelate: 4000
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _StartTime: -3.4028235e+38
+<<<<<<< HEAD
+    - _StartTime: 19.414589
+=======
+    - _StartTime: 116.8352
+>>>>>>> 2412fe3a55efaff9a7a170e6939d54d7aadd86d7
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
