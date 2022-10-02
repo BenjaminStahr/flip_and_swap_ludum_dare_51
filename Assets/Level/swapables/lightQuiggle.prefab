@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 6343125355623653605}
   - component: {fileID: 540037740180067032}
   - component: {fileID: 9097663184822585632}
+  - component: {fileID: 6693583278096320072}
+  - component: {fileID: -9209485322616855556}
   m_Layer: 0
-  m_Name: quiggle
+  m_Name: lightQuiggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451329097939943381}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.42, y: 0.26, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
@@ -138,6 +140,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotChild: {fileID: 4096625645385371540}
+--- !u!114 &6693583278096320072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451329097939943381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e4e94cf18a63e4fa6159470d07e93a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  darkColor: {r: 1, g: 1, b: 1, a: 0.32941177}
+  lightColor: {r: 1, g: 1, b: 1, a: 1}
+  refresh: 0
+--- !u!114 &-9209485322616855556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451329097939943381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5293a63ceb571942a1747b9a0451a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  home: 1
+  ghostSprite: {fileID: 0}
 --- !u!1 &4096625645385371540
 GameObject:
   m_ObjectHideFlags: 0

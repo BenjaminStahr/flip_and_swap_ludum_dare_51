@@ -60,19 +60,44 @@ public class SwapController : MonoBehaviour
 
     void Apply()
     {
-        SwapObject(player, dark);
+        SwapPlayer(dark);
         lightCam.enabled = !dark;
         darkCam.enabled = dark;
         lightCamControl.Slave = dark;
         darkCamControl.Slave = !dark;
     }
 
-    public void SwapObject(GameObject obj, bool dark)
+    public void SwapPlayer(bool dark)
     {
         // Local position stays the same!
-        Vector2 position = obj.transform.localPosition;
+        Vector2 position = player.transform.localPosition;
         Transform newParent = dark ? darkCamControl.transform.parent : lightCamControl.transform.parent;
+        player.transform.SetParent(newParent);
+        player.transform.localPosition = position;
+    }
+
+    public GameObject FindCorresponding(GameObject levelObject)
+    {
+        int index = levelObject.transform.GetSiblingIndex();
+        GameObject fromlevel = levelObject.transform.parent.gameObject;
+        GameObject tolevel;
+        if (fromlevel == CurrentLevel.Dark)
+        {
+            tolevel = CurrentLevel.Light;
+        }
+        else
+        {
+            tolevel = CurrentLevel.Dark;
+        }
+        return tolevel.transform.GetChild(index).gameObject;
+    }
+
+    public void SwapLevelObject(GameObject obj)
+    {
+        GameObject shadow = FindCorresponding(obj);
+        Transform oldParent = obj.transform.parent;
+        Transform newParent = shadow.transform.parent;
         obj.transform.SetParent(newParent);
-        obj.transform.localPosition = position;
+        shadow.transform.SetParent(oldParent);
     }
 }

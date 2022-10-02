@@ -14,6 +14,8 @@ public class SwapGhost : MonoBehaviour
     [SerializeField]
     private Home home;
 
+    bool isGhost;
+
     [SerializeField]
     private Sprite ghostSprite;
 
@@ -25,7 +27,7 @@ public class SwapGhost : MonoBehaviour
         bool homeDark = home == Home.Dark;
         bool dark = transform.position.x > 500;
 
-        bool isGhost = homeDark != dark;
+        isGhost = homeDark != dark;
 
         Animator anim;
         if (TryGetComponent(out anim))
@@ -34,9 +36,18 @@ public class SwapGhost : MonoBehaviour
         }
 
         collider.enabled = !isGhost;
-        if (isGhost)
+        if (isGhost && ghostSprite != null)
         {
             rnd.sprite = ghostSprite;
+        }
+    }
+
+    private void Update()
+    {
+        if (isGhost)
+        {
+            GameObject other = SwapController.GI.FindCorresponding(gameObject);
+            this.transform.localPosition = other.transform.localPosition;
         }
     }
 }

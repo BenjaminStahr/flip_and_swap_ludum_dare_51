@@ -9,6 +9,8 @@ TagManager:
   - LightCameraBlend
   - DarkCameraBlend
   - Death
+  - Light
+  - Dark
   layers:
   - Default
   - TransparentFX
