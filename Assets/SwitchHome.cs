@@ -6,6 +6,11 @@ public class SwitchHome : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D col)
     {
-        SwapController.GI.SwapLevelObject(gameObject);
+        if (col.gameObject.CompareTag("Bullet")) 
+        {
+            SwapController.GI.SwapLevelObject(gameObject);
+            //Destroy(col.gameObject);
+        }
+        
     }
 }

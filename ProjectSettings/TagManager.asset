@@ -11,6 +11,10 @@ TagManager:
   - Death
   - Light
   - Dark
+  - Game
+  - LevelOneLight
+  - LevelOneDark
+  - Bullet
   layers:
   - Default
   - TransparentFX
