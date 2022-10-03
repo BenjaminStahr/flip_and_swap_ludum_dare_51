@@ -16,8 +16,12 @@ public class CurrentLevel : MonoBehaviour
             level = value; 
             gi_dark.Refresh(); 
             gi_light.Refresh();
+            GameObject lightCam = GameObject.FindGameObjectWithTag("LightCamera");
+            lightCam.GetComponent<CamControl>().enabled = false;
+            lightCam.transform.localPosition = new Vector3(0, 0, 0);
             GameObject.FindGameObjectWithTag("Player")
                 .GetComponent<Controller>().LevelStart();
+            lightCam.GetComponent<CamControl>().enabled = true;
         } 
     }
 
