@@ -190,6 +190,8 @@ public class Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("Death"))
         {
             Death();
+           
+                
         }
     }
 }

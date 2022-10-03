@@ -5,14 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D), typeof(SpriteRenderer))]
 public class SwapGhost : MonoBehaviour
 {    
-    enum Home
+    public enum Home
     {
         Dark,
         Light
     }
 
     [SerializeField]
-    private Home home;
+    public Home home;
 
     bool isGhost;
 

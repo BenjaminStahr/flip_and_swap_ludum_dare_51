@@ -48,7 +48,21 @@ public class Spikey : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.GetComponent<Controller>().Death();
+            bool dark = GameObject.FindGameObjectWithTag("Game").GetComponent<SwapController>().dark;
+            SwapGhost.Home current;
+            if (dark)
+            {
+                current = SwapGhost.Home.Dark;
+            }
+            else
+            {
+                current = SwapGhost.Home.Light;
+            }
+            if (gameObject.transform.parent.GetComponent<SwapGhost>().home == current)
+            {
+                collision.GetComponent<Controller>().Death();
+            }
+            
         }
     }
 }
