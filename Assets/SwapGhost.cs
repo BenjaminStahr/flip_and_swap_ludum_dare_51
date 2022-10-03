@@ -49,6 +49,7 @@ public class SwapGhost : MonoBehaviour
     {
         if (movable && isGhost)
         {
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             GameObject other = SwapController.GI.FindCorresponding(gameObject);
             this.transform.localPosition = other.transform.localPosition;
         }

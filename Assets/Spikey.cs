@@ -16,6 +16,8 @@ public class Spikey : MonoBehaviour
     [SerializeField]
     private float downtime = 5;
 
+    bool triggerEnabled;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,8 @@ public class Spikey : MonoBehaviour
 
         anim = GetComponent<Animator>();
         trigger = GetComponent<BoxCollider2D>();
+        triggerEnabled = trigger.enabled;
+
         anim.SetBool("up", up);
     }
 
@@ -36,7 +40,7 @@ public class Spikey : MonoBehaviour
             timer = Time.realtimeSinceStartup;
             up = !up;
             anim.SetBool("up", up);
-            trigger.enabled = up;
+            trigger.enabled = triggerEnabled && up ;
         }
     }
 
@@ -47,5 +51,4 @@ public class Spikey : MonoBehaviour
             collision.GetComponent<Controller>().Death();
         }
     }
-
 }

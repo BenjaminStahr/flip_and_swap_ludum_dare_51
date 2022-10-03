@@ -14,7 +14,15 @@ public class Controller : MonoBehaviour
     [SerializeField]
     private float jumpSpeed = 10f;
     [SerializeField]
+    private float jumpSpeedLow = 4f;
+    [SerializeField]
     private LayerMask groundLayer;
+
+    private bool gunCollected = false;
+
+    float deathtimer;
+
+    float jumptimer;
 
     public bool faceLeft = true;
 
@@ -39,6 +47,10 @@ public class Controller : MonoBehaviour
     {
         if (!alive)
         {
+            if (Time.realtimeSinceStartup > deathtimer + 3f)
+            {
+                LevelStart();
+            }
             return;
         }
 
@@ -48,10 +60,18 @@ public class Controller : MonoBehaviour
         GroundCheck();
         Move(moveHorizontal);
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space))
         {
             Jump();
         }
+    }
+
+    public void GunCollect()
+    {
+        anim.SetBool("gun", true);
+        anim.SetTrigger("findgun");
+        gunCollected = true;
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public void Move(float moveHorizontal)
@@ -65,12 +85,14 @@ public class Controller : MonoBehaviour
             if (faceLeft == false) 
             {
                 faceLeft = true;
-                gameObject.transform.GetChild(0).transform.Rotate(0, 180, 0);
-                gameObject.transform.GetChild(0).transform.position = new Vector3(gameObject.transform.GetChild(0).transform.position.x + 1.5f, 
-                    gameObject.transform.GetChild(0).transform.position.y,
-                    gameObject.transform.GetChild(0).transform.position.z);
+                Transform t = gameObject.transform.GetChild(0);
+                t.Rotate(0, 180, 0);
+                t.position = new Vector3(
+                    t.position.x + 1.5f, 
+                    t.position.y,
+                    t.position.z
+                    );
             }
-
         }
         if (moveHorizontal < 0)
         {
@@ -78,10 +100,13 @@ public class Controller : MonoBehaviour
             if (faceLeft == true)  
             {
                 faceLeft = false;
-                gameObject.transform.GetChild(0).transform.Rotate(0, 180, 0);
-                gameObject.transform.GetChild(0).transform.position = new Vector3(gameObject.transform.GetChild(0).transform.position.x - 1.5f,
-                    gameObject.transform.GetChild(0).transform.position.y,
-                    gameObject.transform.GetChild(0).transform.position.z);
+                Transform t = gameObject.transform.GetChild(0);
+                t.Rotate(0, 180, 0);
+                t.position = new Vector3(
+                    t.position.x - 1.5f,
+                    t.position.y,
+                    t.position.z
+                    );
             }
         }
         anim.SetBool("grounded", isGrounded && body.velocity.y <= 0);
@@ -93,14 +118,29 @@ public class Controller : MonoBehaviour
     {
         if (isGrounded)
         {
-            body.velocity = new Vector2(body.velocity.x, jumpSpeed);
+            GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().jump.Play();
+            body.velocity = new Vector2(body.velocity.x, jumpSpeedLow);
             anim.SetTrigger("jump");
+            jumptimer = Time.realtimeSinceStartup;
+        }
+
+        float p = Time.realtimeSinceStartup - jumptimer;
+        if (p > 0.10f && p <= 0.5f)
+        {
+            jumptimer -= 1f;
+            body.velocity = new Vector2(body.velocity.x, jumpSpeed);
         }
     }
 
     public void GroundCheck()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up , 1.25f, groundLayer.value);
+        RaycastHit2D hit = Physics2D.Raycast(
+            transform.position, 
+            -transform.up, 
+            1.25f, 
+            groundLayer.value
+            );
+
         if (hit.collider != null && hit.collider.gameObject != gameObject)
         {
             isGrounded = true;
@@ -117,9 +157,26 @@ public class Controller : MonoBehaviour
         {
             return;
         }
+
+        body.bodyType = RigidbodyType2D.Static;
+        deathtimer = Time.realtimeSinceStartup;
         alive = false;
         anim.SetTrigger("death");
     }
+
+    public void LevelStart()
+    {
+        alive = true;
+        anim.SetTrigger("jump");
+        transform.localPosition = Vector2.zero + Vector2.up * 3f;
+        body.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Death"))
+        {
+            Death();
+        }
+    }
 }
-
-
