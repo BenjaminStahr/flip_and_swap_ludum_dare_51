@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4157817849951898542}
   - component: {fileID: 5195070273870819464}
   - component: {fileID: -3291934729387843576}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: darkQuibble
   m_TagString: Untagged
   m_Icon: {fileID: 0}

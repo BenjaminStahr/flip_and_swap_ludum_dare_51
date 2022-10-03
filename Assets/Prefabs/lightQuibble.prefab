@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4157817849951898542}
   - component: {fileID: 8225736782815042404}
   - component: {fileID: 484282096802163559}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: lightQuibble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
