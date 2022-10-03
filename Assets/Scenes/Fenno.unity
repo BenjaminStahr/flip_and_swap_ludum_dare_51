@@ -424,7 +424,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 104998162493383595, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
       propertyPath: currentLevelID
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1978906795857155791, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
       propertyPath: camera
@@ -482,6 +482,10 @@ PrefabInstance:
       propertyPath: other
       value: 
       objectReference: {fileID: 2005893334}
+    - target: {fileID: 7821632801344422906, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
 --- !u!1001 &5885912938017718053
@@ -491,6 +495,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 597865874832421296, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
+      propertyPath: currentLevelID
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5885912937071688416, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -546,6 +554,10 @@ PrefabInstance:
     - target: {fileID: 5885912937385762529, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
       propertyPath: m_Name
       value: Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328773908149555681, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7646539928861749369, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
       propertyPath: camera

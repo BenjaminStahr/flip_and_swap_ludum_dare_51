@@ -15,7 +15,10 @@ public class CurrentLevel : MonoBehaviour
         set { 
             level = value; 
             gi_dark.Refresh(); 
-            gi_light.Refresh(); } 
+            gi_light.Refresh();
+            GameObject.FindGameObjectWithTag("Player")
+                .GetComponent<Controller>().LevelStart();
+        } 
     }
 
     public static GameObject Dark { get => gi_dark.transform.GetChild(CurrentLevelID-1).gameObject; }
