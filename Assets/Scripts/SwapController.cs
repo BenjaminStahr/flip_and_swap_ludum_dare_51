@@ -102,14 +102,6 @@ public class SwapController : MonoBehaviour
         Vector2 newp = shadow.transform.position;
         obj.transform.SetParent(newParent);
         shadow.transform.SetParent(oldParent);
-        if (obj.CompareTag("Quibble")) 
-        {
-            //shadow.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-           // obj.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-            //newp += new Vector2(0, 1.5f);
-            //oldp += new Vector2(0, 1.5f);
-
-        }
         obj.transform.position = newp;
         shadow.transform.position = oldp;
     }

@@ -118,7 +118,12 @@ public class Controller : MonoBehaviour
     {
         if (isGrounded)
         {
-            GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().jump.Play();
+            if (GameObject.FindGameObjectWithTag("Game") != null) 
+            {
+                GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().jump.Play();
+            } 
+            
+            
             body.velocity = new Vector2(body.velocity.x, jumpSpeedLow);
             anim.SetTrigger("jump");
             jumptimer = Time.realtimeSinceStartup;

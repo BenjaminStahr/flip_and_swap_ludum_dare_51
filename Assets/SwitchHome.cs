@@ -8,7 +8,11 @@ public class SwitchHome : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Bullet")) 
         {
-            GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().swap.Play();
+            if (GameObject.FindGameObjectWithTag("Game") != null) 
+            {
+                GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().swap.Play();
+            }
+                
             SwapController.GI.SwapLevelObject(gameObject);
         }
         
