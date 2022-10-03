@@ -18,8 +18,7 @@ public class CurrentLevel : MonoBehaviour
     public static GameObject Light { get => gi_light.transform.GetChild(CurrentLevelID - 1).gameObject; }
     static CurrentLevel gi_light;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (transform.parent.CompareTag("Dark"))
         {

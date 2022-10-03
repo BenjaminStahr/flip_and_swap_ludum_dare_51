@@ -9,7 +9,7 @@ public class SwapController : MonoBehaviour
     [SerializeField] public Camera darkCam;
     [SerializeField] public CamControl lightCamControl;
     [SerializeField] public CamControl darkCamControl;
-
+    [SerializeField] public Animator timerAnim;
 
 
     private CameraBlendInitializer cbi;
@@ -60,6 +60,7 @@ public class SwapController : MonoBehaviour
 
     void Apply()
     {
+        timerAnim.SetTrigger(dark ? "red" : "blue");
         SwapPlayer(dark);
         lightCam.enabled = !dark;
         darkCam.enabled = dark;
