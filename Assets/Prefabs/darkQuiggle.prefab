@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 540037740180067032}
   - component: {fileID: 9097663184822585632}
   - component: {fileID: 6693583278096320072}
+  - component: {fileID: 7996990866184428549}
   - component: {fileID: 3736379052145990058}
   m_Layer: 0
   m_Name: darkQuiggle
@@ -155,6 +156,18 @@ MonoBehaviour:
   darkColor: {r: 1, g: 1, b: 1, a: 1}
   lightColor: {r: 1, g: 1, b: 1, a: 0.32941177}
   refresh: 0
+--- !u!114 &7996990866184428549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451329097939943381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2437fed41e9c0764984e3108248e83e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3736379052145990058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   home: 0
+  movable: 0
   ghostSprite: {fileID: 0}
 --- !u!1 &4096625645385371540
 GameObject:

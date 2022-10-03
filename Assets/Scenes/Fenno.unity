@@ -617,12 +617,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 104998162493383595, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
       propertyPath: currentLevelID
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1978906795857155791, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 2082550398}
+    - target: {fileID: 4536981088924141508, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
+      propertyPath: m_TagString
+      value: Quibble
+      objectReference: {fileID: 0}
     - target: {fileID: 4703571146452543309, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
       propertyPath: m_Name
       value: Dark
@@ -675,6 +679,22 @@ PrefabInstance:
       propertyPath: other
       value: 
       objectReference: {fileID: 2005893334}
+    - target: {fileID: 6289782983005064498, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
+      propertyPath: home
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6289782983005064498, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
+      propertyPath: movable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6289782983005064498, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
+      propertyPath: ghostSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: faa56d669c02dbc4fb3ac809c1c1d068, type: 3}
+    - target: {fileID: 7512779343236460027, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 872c0edf2bf27394fac2c100780e283e, type: 3}
 --- !u!1001 &5885912938017718053
@@ -684,6 +704,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3943010885911536470, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.483
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021596676022556127, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
+      propertyPath: m_TagString
+      value: Quibble
+      objectReference: {fileID: 0}
     - target: {fileID: 5885912937071688416, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -740,9 +768,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light
       objectReference: {fileID: 0}
+    - target: {fileID: 6594248811061248564, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6805151044421164841, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
+      propertyPath: movable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7024434129421352928, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7024434129421352928, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328773908149555681, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7646539928861749369, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 1797226913}
+    - target: {fileID: 7973524343892354714, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc95ddb95d4c0f14ca6ed7f33349ff11, type: 3}
