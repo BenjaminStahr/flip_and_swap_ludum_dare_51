@@ -72,7 +72,7 @@ Material:
     - _Pixelate: 4000
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _StartTime: 35.76508
+    - _StartTime: 19.118916
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
