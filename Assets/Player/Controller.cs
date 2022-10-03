@@ -49,7 +49,7 @@ public class Controller : MonoBehaviour
         {
             if (Time.realtimeSinceStartup > deathtimer + 1.5f)
             {
-                LevelStart();
+                Respawn();
             }
             return;
         }
@@ -171,8 +171,16 @@ public class Controller : MonoBehaviour
 
     public void LevelStart()
     {
+        transform.localPosition = Vector2.zero + Vector2.up * 3f;
+        anim.Rebind();
+        anim.Update(0f); 
+        gunCollected = false;
+        transform.GetChild(0).gameObject.SetActive(false);
+    }
+
+    public void Respawn()
+    {
         alive = true;
-        anim.SetTrigger("jump");
         transform.localPosition = Vector2.zero + Vector2.up * 3f;
         body.bodyType = RigidbodyType2D.Dynamic;
     }
