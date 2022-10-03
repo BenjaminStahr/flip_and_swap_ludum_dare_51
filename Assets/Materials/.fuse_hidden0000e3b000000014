@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DarkToLightMaterial
+  m_Name: LightToDarkMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 5f5c5f76c04fa6742a7c8dcff7b2914a, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -68,11 +68,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _Period: 0.4
+    - _Period: 1
     - _Pixelate: 4000
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _StartTime: 5.941829
+    - _StartTime: -3.4028235e+38
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
