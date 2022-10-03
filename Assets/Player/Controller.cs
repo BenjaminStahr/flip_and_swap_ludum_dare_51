@@ -166,6 +166,7 @@ public class Controller : MonoBehaviour
         body.bodyType = RigidbodyType2D.Static;
         deathtimer = Time.realtimeSinceStartup;
         alive = false;
+        GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().death.Play();
         anim.SetTrigger("death");
     }
 
@@ -189,7 +190,6 @@ public class Controller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Death"))
         {
-            GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().death.Play();
             Death();
             
 

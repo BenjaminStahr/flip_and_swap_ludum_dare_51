@@ -67,7 +67,7 @@ public class Spikey : MonoBehaviour
                 collision.GetComponent<Controller>().Death();
                 
             }
-            GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().death.Play();
+            //GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().death.Play();
         }
     }
 }
