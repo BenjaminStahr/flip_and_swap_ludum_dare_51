@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1ffa91c8c1c9f4d82af48368836b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uptime: 3
-  downtime: 5
+  uptime: 0.5
+  downtime: 2.5
 --- !u!1001 &4474722813238470305
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -18,6 +18,8 @@ public class Controller : MonoBehaviour
     [SerializeField]
     private LayerMask groundLayer;
 
+    private bool gunCollected = false;
+
     float deathtimer;
 
     float jumptimer;
@@ -39,8 +41,6 @@ public class Controller : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        anim.SetBool("gun", true);
-        anim.SetTrigger("findgun");
     }
 
     private void Update()
@@ -64,6 +64,14 @@ public class Controller : MonoBehaviour
         {
             Jump();
         }
+    }
+
+    public void GunCollect()
+    {
+        anim.SetBool("gun", true);
+        anim.SetTrigger("findgun");
+        gunCollected = true;
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public void Move(float moveHorizontal)

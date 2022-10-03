@@ -7,10 +7,15 @@ public class CurrentLevel : MonoBehaviour
     [SerializeField]
     private int currentLevelID = 1;
 
+    private static int level;
+
     public static int CurrentLevelID 
     { 
-        get => gi_light.currentLevelID; 
-        set { gi_light.currentLevelID = value; gi_dark.Refresh(); gi_light.Refresh(); } 
+        get => level; 
+        set { 
+            level = value; 
+            gi_dark.Refresh(); 
+            gi_light.Refresh(); } 
     }
 
     public static GameObject Dark { get => gi_dark.transform.GetChild(CurrentLevelID-1).gameObject; }
@@ -22,10 +27,12 @@ public class CurrentLevel : MonoBehaviour
     {
         if (transform.parent.CompareTag("Dark"))
         {
+            level = currentLevelID;
             gi_dark = this;
         }
         else
         {
+            level = currentLevelID;
             gi_light = this;
         }
         Refresh();        
