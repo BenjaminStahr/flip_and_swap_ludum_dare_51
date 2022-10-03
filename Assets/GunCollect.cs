@@ -8,7 +8,9 @@ public class GunCollect : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            collision.gameObject.GetComponent<Controller>().GunCollect();
+            Destroy(SwapController.GI.FindCorresponding(collision.gameObject));
+            Destroy(gameObject);
         }
     }
 }
