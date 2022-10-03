@@ -52,6 +52,11 @@ public class SwapController : MonoBehaviour
 
     public void Swap()
     {
+        if (GameObject.FindGameObjectWithTag("Game") != null)
+        {
+            GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().swap.Play();
+        }
+
         timer = Time.realtimeSinceStartup;
         dark = !dark;
         cbi.Swap(dark);

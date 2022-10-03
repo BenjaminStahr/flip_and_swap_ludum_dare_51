@@ -20,6 +20,10 @@ public class Shot : MonoBehaviour
         {
             if (lastShotStart + 0.5f < Time.time) 
             {
+                if (GameObject.FindGameObjectWithTag("Game") != null)
+                {
+                    GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().shoot.Play();
+                }
                 GameObject proj = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
                 proj.GetComponent<Rigidbody2D>().velocity = proj.transform.right * speed;
             }
