@@ -15,6 +15,7 @@ TagManager:
   - LevelOneLight
   - LevelOneDark
   - Bullet
+  - Quibble
   layers:
   - Default
   - TransparentFX
