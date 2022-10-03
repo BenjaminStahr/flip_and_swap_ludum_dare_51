@@ -8,6 +8,10 @@ public class GunCollect : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (GameObject.FindGameObjectWithTag("Game") != null)
+            {
+                GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().collect2.Play();
+            }
             collision.gameObject.GetComponent<Controller>().GunCollect();
             Destroy(SwapController.GI.FindCorresponding(gameObject));
             Destroy(gameObject);

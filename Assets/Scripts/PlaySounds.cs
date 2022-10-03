@@ -7,6 +7,9 @@ public class PlaySounds : MonoBehaviour
     public AudioSource main;
     public AudioSource jump;
     public AudioSource swap;
+    public AudioSource collect1;
+    public AudioSource collect2;
+
     // Start is called before the first frame update
     void Start()
     {
