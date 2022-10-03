@@ -39,6 +39,8 @@ public class Controller : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        anim.SetBool("gun", true);
+        anim.SetTrigger("findgun");
     }
 
     private void Update()
