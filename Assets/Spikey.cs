@@ -65,8 +65,9 @@ public class Spikey : MonoBehaviour
             if (gameObject.transform.parent.GetComponent<SwapGhost>() == null) 
             {
                 collision.GetComponent<Controller>().Death();
+                
             }
-            
+            GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().death.Play();
         }
     }
 }

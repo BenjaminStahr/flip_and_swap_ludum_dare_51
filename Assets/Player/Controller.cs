@@ -189,9 +189,10 @@ public class Controller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Death"))
         {
+            GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().death.Play();
             Death();
-           
-                
+            
+
         }
     }
 }

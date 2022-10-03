@@ -12,6 +12,7 @@ public class Win : MonoBehaviour
             {
                 SceneManager.LoadScene(2, LoadSceneMode.Single);
             }
+            GameObject.FindGameObjectWithTag("Game").GetComponent<PlaySounds>().levelClear.Play();
             CurrentLevel.CurrentLevelID++;
         }
     }
