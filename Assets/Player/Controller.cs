@@ -47,7 +47,7 @@ public class Controller : MonoBehaviour
     {
         if (!alive)
         {
-            if (Time.realtimeSinceStartup > deathtimer + 3f)
+            if (Time.realtimeSinceStartup > deathtimer + 1.5f)
             {
                 LevelStart();
             }
