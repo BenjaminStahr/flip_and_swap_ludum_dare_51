@@ -182,6 +182,13 @@ public class Controller : MonoBehaviour
     public void Respawn()
     {
         alive = true;
+        anim.Rebind();
+        anim.Update(0f);
+        if (gunCollected)
+        {
+            anim.SetTrigger("findgun");
+        }
+        anim.SetBool("gun", gunCollected);
         transform.localPosition = Vector2.zero + Vector2.up * 3f;
         body.bodyType = RigidbodyType2D.Dynamic;
     }
