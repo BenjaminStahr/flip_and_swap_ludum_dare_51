@@ -58,7 +58,11 @@ public class Spikey : MonoBehaviour
             {
                 current = SwapGhost.Home.Light;
             }
-            if (gameObject.transform.parent.GetComponent<SwapGhost>().home == current)
+            if (gameObject.transform.parent.GetComponent<SwapGhost>() != null && gameObject.transform.parent.GetComponent<SwapGhost>().home == current)
+            {
+                collision.GetComponent<Controller>().Death();
+            }
+            if (gameObject.transform.parent.GetComponent<SwapGhost>() == null) 
             {
                 collision.GetComponent<Controller>().Death();
             }
