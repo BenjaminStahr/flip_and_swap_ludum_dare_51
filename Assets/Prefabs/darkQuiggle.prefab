@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   home: 0
+  movable: 1
   ghostSprite: {fileID: 0}
 --- !u!1 &4096625645385371540
 GameObject:

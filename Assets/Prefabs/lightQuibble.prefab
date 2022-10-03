@@ -153,4 +153,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   home: 1
+  movable: 1
   ghostSprite: {fileID: 0}
